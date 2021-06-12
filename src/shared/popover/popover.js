@@ -8,7 +8,7 @@ class PopoverWrapper extends Component {
     this.state = { show: false };
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseOverAndOut = this.handleMouseOverAndOut.bind(this);
-    this.handleOverleyHide = this.handleOverleyHide.bind(this);
+    this.handleOverLeyHide = this.handleOverLeyHide.bind(this);
   }
 
   handleClick(e) {
@@ -27,40 +27,36 @@ class PopoverWrapper extends Component {
     };
   }
 
-  handleOverleyHide() {
+  handleOverLeyHide() {
     this.setState({ show: false });
   }
 
   render() {
-    const { id, title, placement, anchorContent, popoverClass, children } =
-      this.props;
+    const { id, title, placement, anchorContent, popoverClass, children, closeIcon } = this.props;
     return (
       <span>
-        <a
+       {<span
           id={`${id}-popover`}
-          href="javascript:void(0)"
           onClick={this.handleClick}
-          onMouseOver={this.handleMouseOverAndOut(true)}
-          onMouseOut={this.handleMouseOverAndOut(false)}
         >
           {anchorContent}
-        </a>
+        </span>}
         <Overlay
           show={this.state.show}
           target={this.state.target}
-          onHide={this.handleOverleyHide}
+          onHide={this.handleOverLeyHide}
           animation={false}
           placement={placement}
           shouldUpdatePosition
           rootClose
         >
           <Popover id={id} title={title} bsStyle={`wrapper ${popoverClass}`}>
-            <a
+            { closeIcon && <a
               id={`${id}-popover-close`}
-              href="javascript:void(0)"
+              href="#Foo"
               onClick={(e) => {
                 e.preventDefault();
-                this.handleOverleyHide();
+                this.handleOverLeyHide();
               }}
             >
               <span className="close-popover">
@@ -68,7 +64,7 @@ class PopoverWrapper extends Component {
                   <i className="fa fa-times" aria-hidden="true" />
                 </span>
               </span>
-            </a>
+            </a>}
             {children}
           </Popover>
         </Overlay>
@@ -85,6 +81,7 @@ PopoverWrapper.defaultProps = {
   popoverClass: "override",
   showPopoverOnHover: false,
   children: "",
+  closeIcon: false,
 };
 
 PopoverWrapper.propTypes = {
@@ -95,6 +92,7 @@ PopoverWrapper.propTypes = {
   anchorContent: PropTypes.node,
   showPopoverOnHover: PropTypes.bool,
   children: PropTypes.node,
+  closeIcon: PropTypes.bool,
 };
 
 export default PopoverWrapper;

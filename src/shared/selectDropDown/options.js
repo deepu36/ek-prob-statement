@@ -1,4 +1,24 @@
-export const countriesList = [
+export const options = [
+  {
+    id: 0,
+    disabled: true,
+    stationType: "AIRPORT",
+    stationCode: "ABJ",
+    pointOfSale: "ABJ",
+    emiratesOperated: true,
+    station: "Abidjan",
+    stationLongName: "Felix Houphouet Boigny Airport",
+    cityCode: "ABJ",
+    city: "Abidjan",
+    cityLongName: "Abidjan",
+    state: "Lagunes",
+    country: "Côte d'Ivoire (Ivory Coast)",
+    countryLongName: "Côte d'Ivoire (Ivory Coast)",
+    countryCode: "CI",
+    pointOfSaleCountryCode: "CI",
+    region: "Africa",
+    operatedBy: ["ek"],
+  },
   {
     stationType: "AIRPORT",
     stationCode: "ABJ",
@@ -25276,18 +25296,3 @@ export const countriesList = [
     },
   },
 ];
-
-export const passengersClass = [
-  {
-    id: 1,
-    label: "Business Class"
-  },
-  {
-    id: 2,
-    label: "Economy Class"
-  },
-  {
-    id: 3,
-    label: "First Class"
-  }
-]

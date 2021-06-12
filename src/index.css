@@ -11,14 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.form-control{height: 60px;}
 .custom-select {
   padding: 0.8rem !important;
 }
 .passengerType {
   display: flex;
   padding: 15px;
-  width: 300px;
+  width:100%;
   margin-top: 10px;
 }
 .passengerType button {
@@ -29,13 +29,36 @@ code {
   font-weight: bold;
   border: 1px solid #000;
 }
-.passegerData {
+.passengerData {
   width: 160px;
   text-align: center;
 }
-.passegerData label {
+.passengerData label {
   font-size: 18px;
 }
-.passegerData p {
+.passengerData p {
   color: #ccc;
+}
+.custom-select input:focus-visible{outline: none;}
+.departingDate{position: relative;}
+.departingDate small{position: absolute;top: -11px;font-size: 14px;color: #9a9999;}
+.departingDate input{margin-top: 10px;}
+.custom-btn{padding: 14px 10px !important; font-size: 20px !important;}
+.departingDate1{position: relative;}
+.departingDate1 small{position: absolute;top: 2px;font-size: 14px;color: #9a9999;left: 15px;}
+.text-left{text-align: left;}
+.tooltip-icon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.close-popover {
+  position: relative;
+  float: right;
+  color: black;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background: #fff;
+  padding: 0px;
+  text-align: center;
 }
