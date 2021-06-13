@@ -1,5 +1,5 @@
 import "./App.css";
-import SearchFlights from "./searchflights/searchflights";
+import SearchFlights from "./organisms/searchflights/searchflights";
 
 function App() {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import PopoverWrapper from "../shared/popover/popover";
-import Passenger from "../shared/passengertype/passenger";
-import SearchFlightDatePicker from "../shared/searchflightdatepicker/searchflightdatepicker";
-import Dropdown from "../shared/dropdown/dropdown";
-import SelectDropDown from "../shared/selectDropDown/selectDropDown";
-import { passengersClass } from "../mockdata/mockData";
+import PopoverWrapper from "../../molecules/popover/popover";
+import Passenger from "../../molecules/passengertype/passenger";
+import SearchFlightDatePicker from "../../molecules/searchflightdatepicker/searchflightdatepicker";
+import Dropdown from "../../molecules/dropdown/dropdown";
+import SelectDropDown from "../../molecules/selectDropDown/selectDropDown";
+import { passengersClass } from "../../mockdata/mockData";
 
 export default function SearchFlights(props) {
     const [departureCode, setDepartureCode] = React.useState(null);
