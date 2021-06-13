@@ -24,3 +24,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+### `npm run test`
+
+It will run the test scripts / unit testing of each every component and give the results.
+
+### `npm test -- --coverage`
+
+This command will give the coverage report of the application.
